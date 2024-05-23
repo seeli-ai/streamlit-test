@@ -32,8 +32,7 @@ if prompt := st.chat_input("What is up?"):
         full_response = ""
         client = OpenAI(api_key=api_key)
         for response in client.chat.completions.create(model="gpt-3.5-turbo",
-        messages=[{"role": m["role"], "content": m["content"]}
-                  for m in st.session_state.messages], stream=True):
+        messages=[{"role": m["role"], "content": m["content"]} for m in st.session_state.messages], stream=True):
 
             if response.choices[0].delta.content is not None:
                 full_response += response.choices[0].delta.content
