@@ -13,3 +13,5 @@ It might be nessesary to uninstall and then reinstall the following packages: st
 To work with multipage apps change the name of the pages1 directory back to pages
 
 To run the app use the following command: streamlit run test3.py
+
+:tada:
